@@ -1,0 +1,54 @@
+body {
+  background-color: #202020;
+}
+
+.loading-content p {
+  padding: 20px;
+  text-align: center;
+}
+
+.loading-content p a {
+  display: block;
+  text-decoration: none;
+  line-height: 30px;
+  color: #999999;
+}
+
+.loading-content p a:hover {
+  color: #ffffff;
+}
+
+#loading-progress {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: -6px;
+  width: 0;
+  height: 3px;
+  background-color: #ce0000;
+  border-radius: 1px;
+  transition: width 2000ms ease-out, opacity 500ms linear;
+}
+
+#loading-progress-bar,
+#loading-progress-shadow {
+  position: absolute;
+  top: 0;
+  height: 3px;
+  box-shadow: #777777 1px 0 6px 1px;
+  border-radius: 100%;
+}
+
+#loading-progress-bar {
+  clip: rect(-6px, 22px, 14px, 10px);
+  opacity: 0.6;
+  width: 20px;
+  right: 0;
+}
+
+#loading-progress-shadow {
+  clip: rect(-6px, 90px, 14px, -6px);
+  opacity: 0.6;
+  width: 180px;
+  right: -80px;
+}
